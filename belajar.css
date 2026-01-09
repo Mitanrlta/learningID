@@ -240,7 +240,6 @@ main.main-content {
 }
 
 .modal-actions button {
-  flex: 1;
   padding: 12px;
   border-radius: 12px;
   font-size: 14px;
@@ -570,6 +569,7 @@ main.main-content {
 ========================
    CARD
 ================================ */
+
 
 
 
