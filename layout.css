@@ -113,8 +113,8 @@
 }
 
 .help-icon {
-  width: 5px;
-  height: 5px;
+  width: 18px;
+  height: 18px;
   fill: var(--ungu-primary);
 }
 
@@ -137,8 +137,8 @@
 }
 
 .hamburger-icon {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   stroke: #ffffff;
   stroke-width: 2.5;
   fill: none;
@@ -294,5 +294,6 @@ body {
   background: #f4f6fb;
   color: #111827;
 }
+
 
 
