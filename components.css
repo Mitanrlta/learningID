@@ -101,6 +101,9 @@
 }
 /* WELCOME CARD */
 
+/* ===============================
+   BERANDA – GLOBAL
+================================ */
 .welcome-card {
   background-color: var(--ungu-soft);
   border-radius: var(--radius);
@@ -109,14 +112,7 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: var(--shadow-soft);
-}
-
-.welcome-text h2 {
-  margin-bottom: 8px;
-}
-
-.welcome-text p {
-  margin-bottom: 16px;
+  gap: 20px;
 }
 
 .avatar-circle {
@@ -124,51 +120,12 @@
   height: 80px;
   border-radius: 50%;
   background-color: var(--ungu-primary);
+  flex-shrink: 0;
 }
 
-/* GRID */
 /* ===============================
-   RESPONSIVE BERANDA (MOBILE)
+   GRID CARD INFO
 ================================ */
-/* ===============================
-   RESPONSIVE BERANDA (MOBILE)
-================================ */
-@media (max-width: 768px) {
-
-  /* Welcome Card */
-  .welcome-card {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-
-  /* Card grid 4 kolom → 1 kolom */
-  .card-grid.four-column {
-    grid-template-columns: 1fr;
-  }
-
-  /* Step grid 6 kolom → 1 kolom */
-  .step-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .step-card {
-    padding-bottom: 22px;
-  }
-
-  .step-number {
-    bottom: -12px;
-  }
-}
-
-
-@media (max-width: 480px) {
-  /* Step grid → 1 kolom di HP kecil */
-  .step-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .card-grid {
   display: grid;
   gap: 20px;
@@ -178,8 +135,7 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* INFO CARD */
-
+/* Card info */
 .info-card {
   background-color: var(--putih);
   border-radius: var(--radius);
@@ -196,8 +152,9 @@
   margin: 0 auto 12px;
 }
 
-/* STEP */
-
+/* ===============================
+   STEP CARD
+================================ */
 .step-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -234,10 +191,52 @@
   justify-content: center;
 }
 
-/* CTA */
-
+/* ===============================
+   CTA
+================================ */
 .cta-section {
   margin: 50px 0 20px;
+}
+
+/* ===============================
+   RESPONSIVE – TABLET
+================================ */
+@media (max-width: 1024px) {
+  .card-grid.four-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .step-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===============================
+   RESPONSIVE – MOBILE (INI KUNCI)
+================================ */
+@media (max-width: 768px) {
+
+  /* Welcome card jadi vertikal */
+  .welcome-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* SEMUA GRID JADI 1 KOLOM */
+  .card-grid,
+  .card-grid.four-column,
+  .step-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .info-card,
+  .step-card {
+    width: 100%;
+  }
+
+  .step-number {
+    bottom: -12px;
+  }
 }
 
 /* =====================
@@ -839,4 +838,5 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 
